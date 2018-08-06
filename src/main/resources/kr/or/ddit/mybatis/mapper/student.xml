@@ -14,14 +14,14 @@
 	<select id="getStudentById" parameterType="Integer" resultType="studentVo">
 		SELECT *
 		FROM STUDENT
-		WHERE ID = #{id}
+		WHERE std_num = #{id}
 	</select>
 	
 	<!-- 특정 학생 정보 조회 -->
 	<select id="getStudentByVo" parameterType="studentVo" resultType="studentVo">
 		SELECT *
 		FROM STUDENT
-		WHERE ID = #{id}
+		WHERE std_num = #{id}
 	</select>
 	
 	<!-- 학생 정보 페이징 조회 -->
@@ -52,7 +52,7 @@
 			addr2 = #{addr2},
 			zipcd = #{zipcd},
 			name = #{name}
-		WHERE id = #{id}
+		WHERE std_num = #{id}
 	</update>
   
 </mapper>
